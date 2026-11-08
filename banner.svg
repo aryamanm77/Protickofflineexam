@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="900" height="240" role="img" aria-label="Team Project Playbook">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0B1B35"/><stop offset="1" stop-color="#1B3A6B"/>
+  </linearGradient>
+  <linearGradient id="ttl" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#8FC1FF"/>
+  </linearGradient>
+  <clipPath id="c"><rect width="900" height="240" rx="18"/></clipPath>
+</defs>
+<style>
+  .t{font-family:'Segoe UI',Helvetica,Arial,sans-serif}
+  .orb{animation:float 7s ease-in-out infinite}
+  .o2{animation-duration:9s;animation-delay:-3s}
+  .o3{animation-duration:11s;animation-delay:-6s}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+  .ttl{animation:rise 1.2s ease-out both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .line{opacity:0;animation:cyc 12s infinite}
+  .l2{animation-delay:4s}.l3{animation-delay:8s}
+  @keyframes cyc{0%{opacity:0;transform:translateY(8px)}4%,29%{opacity:1;transform:none}33%,100%{opacity:0}}
+  .dash{stroke-dasharray:6 10;animation:flow 2.5s linear infinite}
+  @keyframes flow{to{stroke-dashoffset:-32}}
+  .node{animation:pulse 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+  @keyframes pulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.25);opacity:1}}
+</style>
+<g clip-path="url(#c)">
+  <rect width="900" height="240" fill="url(#bg)"/>
+  <circle class="orb" cx="90" cy="60" r="70" fill="#2F6FEB" opacity=".18"/>
+  <circle class="orb o2" cx="800" cy="190" r="90" fill="#58A6FF" opacity=".15"/>
+  <circle class="orb o3" cx="640" cy="40" r="40" fill="#7EE787" opacity=".12"/>
+  <!-- git graph -->
+  <g transform="translate(610,150)" fill="none" stroke-width="3">
+    <path d="M0 40 H270" stroke="#58A6FF" opacity=".5"/>
+    <path d="M60 40 C90 40 90 0 130 0 H190 C220 0 220 40 250 40" stroke="#7EE787" opacity=".6"/>
+    <path class="dash" d="M0 40 H270" stroke="#FFFFFF" opacity=".35"/>
+    <path class="dash" d="M60 40 C90 40 90 0 130 0 H190 C220 0 220 40 250 40" stroke="#FFFFFF" opacity=".35"/>
+    <circle class="node" cx="20" cy="40" r="6" fill="#58A6FF" stroke="none"/>
+    <circle class="node" cx="60" cy="40" r="6" fill="#58A6FF" stroke="none" style="animation-delay:.3s"/>
+    <circle class="node" cx="130" cy="0" r="6" fill="#7EE787" stroke="none" style="animation-delay:.6s"/>
+    <circle class="node" cx="190" cy="0" r="6" fill="#7EE787" stroke="none" style="animation-delay:.9s"/>
+    <circle class="node" cx="250" cy="40" r="6" fill="#58A6FF" stroke="none" style="animation-delay:1.2s"/>
+  </g>
+  <text class="t ttl" x="50" y="105" font-size="48" font-weight="800" fill="url(#ttl)" letter-spacing="1">TEAM PROJECT PLAYBOOK</text>
+  <g class="t" font-size="18" fill="#BFD6F5">
+    <text class="line" x="52" y="150">Edit, commit &amp; push to one shared GitHub repo</text>
+    <text class="line l2" x="52" y="150">Every teammate works on their own branch</text>
+    <text class="line l3" x="52" y="150">Review first. Push safely. Open a Pull Request.</text>
+  </g>
+  <text class="t" x="52" y="205" font-size="13" fill="#7FA6D6" letter-spacing="2">GOOGLE ANTIGRAVITY  •  GITHUB  •  BEGINNER FRIENDLY</text>
+</g>
+</svg>

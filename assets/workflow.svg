@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 270" width="900" height="270" role="img" aria-label="Workflow: open project, branch, edit, review, commit, push, pull request, merge">
+<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#1F6FEB"/></marker></defs>
+<style>
+.t{font-family:'Segoe UI',Helvetica,Arial,sans-serif}
+.box{fill:#EAF2FC;stroke:#8FB3E3;stroke-width:1.5;animation:hl 12.0s infinite}
+@keyframes hl{0%{fill:#1F6FEB;stroke:#0B4BB3}11%{fill:#1F6FEB;stroke:#0B4BB3}14%,100%{fill:#EAF2FC;stroke:#8FB3E3}}
+.tx{fill:#12233F;animation:tx 12.0s infinite}
+@keyframes tx{0%,11%{fill:#FFFFFF}14%,100%{fill:#12233F}}
+.dash{stroke:#1F6FEB;stroke-width:2.5;fill:none;stroke-dasharray:6 6;animation:flow 1.2s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-24}}
+
+.s1{animation-delay:0.0s}
+.s2{animation-delay:1.5s}
+.s3{animation-delay:3.0s}
+.s4{animation-delay:4.5s}
+.s5{animation-delay:6.0s}
+.s6{animation-delay:7.5s}
+.s7{animation-delay:9.0s}
+.s8{animation-delay:10.5s}
+</style>
+<rect width="900" height="270" rx="16" fill="#FFFFFF" stroke="#D5DCE6"/>
+<path class="dash" d="M214 66.0 H249" marker-end="url(#ar)"/>
+<path class="dash" d="M439 66.0 H474" marker-end="url(#ar)"/>
+<path class="dash" d="M664 66.0 H699" marker-end="url(#ar)"/>
+<path class="dash" d="M795.0 106 V144" marker-end="url(#ar)"/>
+<path class="dash" d="M701 186.0 H666" marker-end="url(#ar)"/>
+<path class="dash" d="M476 186.0 H441" marker-end="url(#ar)"/>
+<path class="dash" d="M251 186.0 H216" marker-end="url(#ar)"/>
+<rect class="box s1" x="30" y="30" width="180" height="72" rx="12"/>
+<circle cx="52" cy="52" r="12" fill="#12233F"/><text class="t" x="52" y="57" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">1</text>
+<text class="tx t s1" x="130.0" y="62" text-anchor="middle" font-size="15" font-weight="700">Open shared</text>
+<text class="tx t s1" x="130.0" y="82" text-anchor="middle" font-size="15" font-weight="700">project</text>
+<rect class="box s2" x="255" y="30" width="180" height="72" rx="12"/>
+<circle cx="277" cy="52" r="12" fill="#12233F"/><text class="t" x="277" y="57" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">2</text>
+<text class="tx t s2" x="355.0" y="62" text-anchor="middle" font-size="15" font-weight="700">Create your</text>
+<text class="tx t s2" x="355.0" y="82" text-anchor="middle" font-size="15" font-weight="700">own branch</text>
+<rect class="box s3" x="480" y="30" width="180" height="72" rx="12"/>
+<circle cx="502" cy="52" r="12" fill="#12233F"/><text class="t" x="502" y="57" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">3</text>
+<text class="tx t s3" x="580.0" y="62" text-anchor="middle" font-size="15" font-weight="700">Edit with</text>
+<text class="tx t s3" x="580.0" y="82" text-anchor="middle" font-size="15" font-weight="700">Antigravity</text>
+<rect class="box s4" x="705" y="30" width="180" height="72" rx="12"/>
+<circle cx="727" cy="52" r="12" fill="#12233F"/><text class="t" x="727" y="57" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">4</text>
+<text class="tx t s4" x="805.0" y="62" text-anchor="middle" font-size="15" font-weight="700">Review</text>
+<text class="tx t s4" x="805.0" y="82" text-anchor="middle" font-size="15" font-weight="700">changes</text>
+<rect class="box s5" x="705" y="150" width="180" height="72" rx="12"/>
+<circle cx="727" cy="172" r="12" fill="#12233F"/><text class="t" x="727" y="177" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">5</text>
+<text class="tx t s5" x="805.0" y="182" text-anchor="middle" font-size="15" font-weight="700">Commit</text>
+<text class="tx t s5" x="805.0" y="202" text-anchor="middle" font-size="15" font-weight="700">snapshot</text>
+<rect class="box s6" x="480" y="150" width="180" height="72" rx="12"/>
+<circle cx="502" cy="172" r="12" fill="#12233F"/><text class="t" x="502" y="177" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">6</text>
+<text class="tx t s6" x="580.0" y="182" text-anchor="middle" font-size="15" font-weight="700">Push</text>
+<text class="tx t s6" x="580.0" y="202" text-anchor="middle" font-size="15" font-weight="700">to GitHub</text>
+<rect class="box s7" x="255" y="150" width="180" height="72" rx="12"/>
+<circle cx="277" cy="172" r="12" fill="#12233F"/><text class="t" x="277" y="177" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">7</text>
+<text class="tx t s7" x="355.0" y="182" text-anchor="middle" font-size="15" font-weight="700">Open a</text>
+<text class="tx t s7" x="355.0" y="202" text-anchor="middle" font-size="15" font-weight="700">Pull Request</text>
+<rect class="box s8" x="30" y="150" width="180" height="72" rx="12"/>
+<circle cx="52" cy="172" r="12" fill="#12233F"/><text class="t" x="52" y="177" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">8</text>
+<text class="tx t s8" x="130.0" y="182" text-anchor="middle" font-size="15" font-weight="700">Owner</text>
+<text class="tx t s8" x="130.0" y="202" text-anchor="middle" font-size="15" font-weight="700">merges to main</text>
+</svg>

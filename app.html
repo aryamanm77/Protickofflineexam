@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CampusExam Quick Client</title>
+  <style>
+    body { font-family: sans-serif; max-width: 650px; margin: 40px auto; line-height: 1.5; }
+    input, button, select { display: block; width: 100%; margin: 8px 0 16px; padding: 8px; }
+    .box { border: 1px solid #ccc; padding: 16px; border-radius: 6px; margin-bottom: 20px; }
+    pre { background: #f4f4f4; padding: 10px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <h2>CampusExam Local Console</h2>
+
+  <!-- Login Section -->
+  <div class="box">
+    <h3>1. Authenticate</h3>
+    <input type="text" id="username" placeholder="Username (e.g., admin or 4MH25CS001)" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <div><strong>Token:</strong> <span id="tokenDisplay">Not logged in</span></div>
+  </div>
+
+  <!-- Exam Actions -->
+  <div class="box">
+    <h3>2. Active Exam Session</h3>
+    <button onclick="getExams()">Fetch My Exams</button>
+    <pre id="output">Output will appear here...</pre>
+  </div>
+
+  <script>
+    const API = 'http://127.0.0.1:8080/api';
+    let token = '';
+
+    async function login() {
+      const u = document.getElementById('username').value;
+      const p = document.getElementById('password').value;
+      const body = new URLSearchParams({ username: u, password: p });
+
+      const res = await fetch(`${API}/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString()
+      });
+      const data = await res.json();
+      if (data.token) {
+        token = data.token;
+        document.getElementById('tokenDisplay').innerText = `${data.role} (Session Active)`;
+        document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+      } else {
+        alert('Login failed: ' + JSON.stringify(data));
+      }
+    }
+
+    async function getExams() {
+      if (!token) return alert('Please log in first!');
+      const res = await fetch(`${API}/exams`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      const data = await res.json();
+      document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>
